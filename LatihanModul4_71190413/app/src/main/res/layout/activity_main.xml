@@ -96,16 +96,16 @@
             android:textColor="@color/PL_register1"
             android:textSize="17dp" />
 
-        <TextView
-            android:layout_width="118dp"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/bt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
             android:layout_gravity="center"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button2"
             android:text="@string/register2"
-            android:textAlignment="center"
-            android:textColor="@color/PL_register2"
-            android:textSize="17dp"
-            android:textStyle="bold" />
+            android:textColor="@color/btn_txt_login"
+            android:textSize="10dp" />
 
     </LinearLayout>
 
