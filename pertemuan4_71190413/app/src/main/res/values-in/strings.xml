@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">pertemuan4_71190413</string>
+
+    <!--String untuk projek ini -->
+    <string name="judul">Jarvis AI</string>
+    <string name="username">Username</string>
+    <string name="password">Kata sandi</string>
+    <string name="login">Masuk</string>
+    <string name="register1">Belum punya akun ?</string>
+    <string name="register2">Daftar disini</string>
+
+
+</resources>
