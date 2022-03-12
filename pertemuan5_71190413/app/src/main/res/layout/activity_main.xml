@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_drawable2"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="134dp"
+       android:layout_marginTop="20dp"
+       android:orientation="horizontal"
+       >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:id="@+id/ll_welcomeUser"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="30dp"
+               android:orientation="horizontal"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="5dp"
+                   android:text="@string/username_home"
+                   android:textColor="@color/white"
+                   android:textSize="27dp"
+                   android:textStyle="bold">
+               </TextView>
+               <TextView
+                   android:id="@+id/tv_welcomeUser"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/namaUsername"
+                   android:textSize="27dp"
+                   android:textStyle="bold">
+               </TextView>
+           </LinearLayout>
+
+           <TextView
+               android:id="@+id/tv_memberType"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="10dp"
+               android:text="@string/memberType"
+               android:textColor="@color/memberType"
+               android:textSize="17dp"
+               android:textStyle="bold">
+           </TextView>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="2"
+           >
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="131dp"
+               android:drawableLeft="@drawable/ic_baseline_person_105dp"
+               >
+           </TextView>
+       </LinearLayout>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:id="@+id/itemJarvis"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_home"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            >
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/logo2"
+                >
+            </ImageView>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="@string/jarvis"
+                android:textAlignment="center"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="@color/itemText"
+                >
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/itemGalery"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_home"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            >
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:drawableTop="@drawable/ic_baseline_panorama_90_yellow"
+                >
+            </TextView>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="@string/galery"
+                android:textAlignment="center"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="@color/itemText"
+                >
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/developing"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        >
+    </TextView>
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        android:text="@string/logOut"
+        android:layout_marginTop="140dp"
+        >
+
+    </Button>
+
+</LinearLayout>
+
