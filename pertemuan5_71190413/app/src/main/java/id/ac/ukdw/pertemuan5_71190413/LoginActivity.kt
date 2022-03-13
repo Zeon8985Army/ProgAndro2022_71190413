@@ -1,5 +1,6 @@
 package id.ac.ukdw.pertemuan5_71190413
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity(){
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -27,7 +29,7 @@ class LoginActivity : AppCompatActivity(){
             i.putExtra("username",username)
             startActivity(i)
         }else{
-            showMssg("Password tidak sesuai !")
+            showMssg("Password is not correct !")
         }
     }
 

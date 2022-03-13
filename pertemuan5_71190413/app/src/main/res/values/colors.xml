@@ -22,7 +22,7 @@
 
     <!-- Untuk Halaman Menu   -->
     <color name="memberType">#818181</color>
-    <color name="itemHome">#EFEFEF</color>
+    <color name="itemHome">#E1E1E1</color>
     <color name="itemText">#4C4C4C</color>
     <color name="namaUsername">#FFAA00</color>
 </resources>
