@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <androidx.fragment.app.FragmentContainerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragmentSatu"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="id.ac.ukdw.pertemuan6_71190413.CFragment"
+            >
+
+        </androidx.fragment.app.FragmentContainerView>
+
+        <androidx.fragment.app.FragmentContainerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragmentDua"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="id.ac.ukdw.pertemuan6_71190413.AFragment"
+            >
+
+        </androidx.fragment.app.FragmentContainerView>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Hal3"
+        android:gravity="center"
+        android:layout_weight="0"
+        android:layout_gravity="center"
+        >
+    </TextView>
+
+
+</LinearLayout>

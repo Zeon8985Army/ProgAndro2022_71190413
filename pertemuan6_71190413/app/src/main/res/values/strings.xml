@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">pertemuan6_71190413</string>
+    <string name="layarHorLansInfor">Rotate for better experience</string>
+    <string name="Hal1">Page 1</string>
+    <string name="Hal2">Page 2</string>
+    <string name="Hal3">Page 3</string>
+    <string name="FragA">Fragment A</string>
+    <string name="FragB">Fragment B</string>
+    <string name="FragC">Fragment C</string>
+
+    <string name="goTo1">Go To Halaman 1</string>
+    <string name="goTo2">Go To Halaman 2</string>
+    <string name="goTo3">Go To Halaman 3</string>
+
+</resources>

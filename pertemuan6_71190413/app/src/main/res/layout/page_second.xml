@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="@string/layarHorLansInfor"
+        android:gravity="center"
+        android:drawableStart="@drawable/ic_baseline_screen_rotation_24"
+        >
+    </TextView>
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <androidx.fragment.app.FragmentContainerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragmentA"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:name="id.ac.ukdw.pertemuan6_71190413.BFragment"
+            >
+
+        </androidx.fragment.app.FragmentContainerView>
+        <androidx.fragment.app.FragmentContainerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragmentB"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:name="id.ac.ukdw.pertemuan6_71190413.CFragment"
+            >
+
+        </androidx.fragment.app.FragmentContainerView>
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Hal2"
+        android:gravity="center"
+        >
+    </TextView>
+
+</LinearLayout>
