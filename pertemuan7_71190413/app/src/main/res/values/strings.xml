@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">pertemuan7_71190413</string>
+
+    <!--String untuk projek ini -->
+
+    <!-- Halaman Home   -->
+    <string name="daftarKontak">Daftar Kontak</string>
+    <string name="memberType">Premium Member</string>
+
+
+</resources>

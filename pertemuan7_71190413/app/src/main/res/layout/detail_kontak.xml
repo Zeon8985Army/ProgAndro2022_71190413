@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_drawable2"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/imgKontak"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@mipmap/persona1_foreground"></ImageView>
+
+            <TextView
+                android:id="@+id/tv_namaKontak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Mr. NamaOrang"
+                android:textColor="@color/memberType"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                >
+            </TextView>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#991E6297"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_nomorTelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_local_phone_40"
+            android:drawableRight="@drawable/ic_baseline_message_40"
+            android:text="0858xxxxxx"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_alternate_email_40"
+            android:text="xxxxxxx.xxzzxxx@gmail.com"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            >
+        </TextView>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

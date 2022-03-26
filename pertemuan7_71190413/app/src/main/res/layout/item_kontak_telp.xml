@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:orientation="horizontal"
+    >
+    <ImageView
+        android:id="@+id/imageKontak"
+        android:layout_width="95dp"
+        android:layout_height="match_parent"
+        android:src="@mipmap/persona1_foreground"
+        >
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/kontakNama1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kontak Nama"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            >
+
+        </TextView>
+        <TextView
+            android:id="@+id/nomerKontak1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="081xxxxxxx"
+            android:textColor="@color/nomerTelp"
+            android:textSize="20dp"
+            >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>
+
