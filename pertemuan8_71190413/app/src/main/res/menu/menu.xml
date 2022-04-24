@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/itm_go1"
+        android:icon="@drawable/ic_baseline_looks_one_35"
+        android:title="Halaman 1"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/itm_go2"
+        android:icon="@drawable/ic_baseline_looks_two_35"
+        android:title="Halaman 2"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/itm_go3"
+        android:icon="@drawable/ic_baseline_looks_3_35"
+        android:title="Halaman 3"
+        app:showAsAction="ifRoom"/>
+</menu>
