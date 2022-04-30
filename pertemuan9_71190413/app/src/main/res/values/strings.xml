@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">pertemuan9_71190413</string>
+
+    <!--String untuk projek ini -->
+    <!--  Halaman Login  -->
+    <string name="judul">Jarvis AI</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register1">Didn\'t have an account ?</string>
+    <string name="register2">Register here</string>
+
+    <!-- Halaman Home   -->
+    <string name="username_home">Welcome, </string>
+    <string name="memberType">Premium Member</string>
+    <string name="jarvis">Jarvis</string>
+    <string name="galery">Gallery</string>
+    <string name="developing">Aplication is still under development</string>
+    <string name="logOut">Logout</string>
+    <string name="bahasa">Language :</string>
+    <string name="teksUkuran">Text size :</string>
+
+</resources>
