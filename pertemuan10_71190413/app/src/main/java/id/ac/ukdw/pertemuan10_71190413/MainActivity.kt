@@ -46,6 +46,10 @@ class MainActivity : AppCompatActivity() {
             put(DatabaseContract.Penduduk.COLUMN_NAME_USIA, usia)
         }
         db.insert(DatabaseContract.Penduduk.TABLE_NAME, null, values)
+        val etNama = findViewById<EditText>(R.id.etNama)
+        val etUsia = findViewById<EditText>(R.id.etUsia)
+        etNama.setText("")
+        etUsia.setText("")
         refreshData()
     }
 
