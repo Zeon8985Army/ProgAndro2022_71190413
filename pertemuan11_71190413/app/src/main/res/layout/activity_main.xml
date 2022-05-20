@@ -114,7 +114,59 @@
 
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sortby :"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            />
+        <RadioGroup
+            android:id="@+id/rgSortBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/rbName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Name"
+                >
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbNIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIM"
+                android:layout_gravity="center"
+                >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/rbIpk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="IPK"></RadioButton>
+        </RadioGroup>
+        <Button
+            android:id="@+id/btnSort"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:textSize="10sp"
+            android:text="Sort" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
@@ -146,8 +198,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Hasil Cari :"
+        android:text="Hasil :"
         android:textStyle="bold"
         android:textSize="24sp" />
     <TextView

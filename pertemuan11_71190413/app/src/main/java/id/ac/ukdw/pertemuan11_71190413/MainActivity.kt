@@ -25,10 +25,14 @@ class MainActivity : AppCompatActivity() {
         val rdASC = findViewById<RadioButton>(R.id.rbASC)
         val rdDSC = findViewById<RadioButton>(R.id.rbDSC)
         val rdUnSet = findViewById<RadioButton>(R.id.rbClear)
+        val rdName = findViewById<RadioButton>(R.id.rbName)
+        val rdNim = findViewById<RadioButton>(R.id.rbNIM)
+        val rdIpk = findViewById<RadioButton>(R.id.rbIpk)
 
         // Button
         val btnSMPN = findViewById<Button>(R.id.btnSimpan)
         val btnSRC = findViewById<Button>(R.id.btnSearch)
+        var btnSort = findViewById<Button>(R.id.btnSort)
 
         // OUTPUT
         val txtData = findViewById<TextView>(R.id.tvData)
@@ -153,7 +157,7 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this, "Data sudah keluar", Toast.LENGTH_SHORT).show()
                     } else {
                         firestore?.collection("dataMahasiswa")?.whereEqualTo("nama", src)
-                            ?.orderBy("nim", Query.Direction.ASCENDING)?.get()!!
+                            ?.orderBy("nama", Query.Direction.ASCENDING)?.get()!!
                             .addOnSuccessListener { documents ->
                                 var dataIsi = ""
                                 var counter = 1
@@ -176,7 +180,7 @@ class MainActivity : AppCompatActivity() {
                                 } else {
                                     firestore?.collection("dataMahasiswa")
                                         ?.whereEqualTo("ipk", src.toFloat())
-                                        ?.orderBy("nim", Query.Direction.ASCENDING)?.get()!!
+                                        ?.orderBy("ipk", Query.Direction.ASCENDING)?.get()!!
                                         .addOnSuccessListener { documents ->
                                             var dataIsi = ""
                                             var counter = 1
@@ -209,6 +213,95 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
         }
+        // Ascending
+        fun ASCbyName() {
+            firestore?.collection("dataMahasiswa")?.orderBy("nama", Query.Direction.ASCENDING)?.get()!!
+                .addOnSuccessListener { documents ->
+                    var dataIsi = ""
+                    var counter = 1
+                    for (document in documents) {
+                        dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
+                                " - ${String.format("%.2f", document["ipk"])}\n"
+                        counter = counter + 1
+                    }
+                    txtHSLSRC.text = dataIsi
+                    Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
+                }
+        }
+        fun ASCbyIPK() {
+            firestore?.collection("dataMahasiswa")?.orderBy("ipk", Query.Direction.ASCENDING)?.get()!!
+                .addOnSuccessListener { documents ->
+                    var dataIsi = ""
+                    var counter = 1
+                    for (document in documents) {
+                        dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
+                                " - ${String.format("%.2f", document["ipk"])}\n"
+                        counter = counter + 1
+                    }
+                    txtHSLSRC.text = dataIsi
+                    Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
+                }
+        }
+        fun ASCbyNIM() {
+            firestore?.collection("dataMahasiswa")?.orderBy("nim", Query.Direction.ASCENDING)?.get()!!
+                .addOnSuccessListener { documents ->
+                    var dataIsi = ""
+                    var counter = 1
+                    for (document in documents) {
+                        dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
+                                " - ${String.format("%.2f", document["ipk"])}\n"
+                        counter = counter + 1
+                    }
+                    txtHSLSRC.text = dataIsi
+                    Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
+                }
+        }
+
+        // Desc
+        fun DSCbyName() {
+            firestore?.collection("dataMahasiswa")?.orderBy("nama", Query.Direction.DESCENDING)?.get()!!
+                .addOnSuccessListener { documents ->
+                    var dataIsi = ""
+                    var counter = 1
+                    for (document in documents) {
+                        dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
+                                " - ${String.format("%.2f", document["ipk"])}\n"
+                        counter = counter + 1
+                    }
+                    txtHSLSRC.text = dataIsi
+                    Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
+                }
+        }
+
+        fun DSCbyIPK() {
+            firestore?.collection("dataMahasiswa")?.orderBy("ipk", Query.Direction.DESCENDING)?.get()!!
+                .addOnSuccessListener { documents ->
+                    var dataIsi = ""
+                    var counter = 1
+                    for (document in documents) {
+                        dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
+                                " - ${String.format("%.2f", document["ipk"])}\n"
+                        counter = counter + 1
+                    }
+                    txtHSLSRC.text = dataIsi
+                    Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
+                }
+        }
+        fun DSCbyNIM() {
+            firestore?.collection("dataMahasiswa")?.orderBy("nim", Query.Direction.DESCENDING)?.get()!!
+                .addOnSuccessListener { documents ->
+                    var dataIsi = ""
+                    var counter = 1
+                    for (document in documents) {
+                        dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
+                                " - ${String.format("%.2f", document["ipk"])}\n"
+                        counter = counter + 1
+                    }
+                    txtHSLSRC.text = dataIsi
+                    Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
+                }
+        }
+
         fun searchDSC(src: String) {
             Toast.makeText(this, "Sedang dicari", Toast.LENGTH_LONG).show()
             firestore?.collection("dataMahasiswa")?.whereEqualTo("nim", src)
@@ -234,7 +327,7 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this, "Data sudah keluar", Toast.LENGTH_SHORT).show()
                     } else {
                         firestore?.collection("dataMahasiswa")?.whereEqualTo("nama", src)
-                            ?.orderBy("nim", Query.Direction.DESCENDING)?.get()!!
+                            ?.orderBy("nama", Query.Direction.DESCENDING)?.get()!!
                             .addOnSuccessListener { documents ->
                                 var dataIsi = ""
                                 var counter = 1
@@ -257,7 +350,7 @@ class MainActivity : AppCompatActivity() {
                                 } else {
                                     firestore?.collection("dataMahasiswa")
                                         ?.whereEqualTo("ipk", src.toFloat())
-                                        ?.orderBy("nim", Query.Direction.DESCENDING)?.get()!!
+                                        ?.orderBy("ipk", Query.Direction.DESCENDING)?.get()!!
                                         .addOnSuccessListener { documents ->
                                             var dataIsi = ""
                                             var counter = 1
@@ -296,22 +389,37 @@ class MainActivity : AppCompatActivity() {
                     inpIPK.text.toString().toFloat()
                 )
                 Toast.makeText(this, "Data berhasil ditambahkan !", Toast.LENGTH_SHORT).show()
+                inpNIM.setText("")
+                inpName.setText("")
+                inpIPK.setText("")
                 firestore?.collection("dataMahasiswa")?.add(dataMahasiswa)
                 tampilinData()
             }
 
             btnSRC.setOnClickListener {
-                if (rdASC.isChecked()) {
-                    if (inpSRC.text.toString() != "" && inpSRC.text.toString() != null) {
-                        searchASC(inpSRC.text.toString())
+                if (inpSRC.text.toString() != "" && inpSRC.text.toString() != null) {
+                    search(inpSRC.text.toString())
+                }
+            }
+
+            // Area sorting
+            // ASC
+            btnSort.setOnClickListener {
+                if (rdASC.isChecked()){
+                    if (rdName.isChecked()){
+                        ASCbyName()
+                    }else if(rdNim.isChecked()){
+                        ASCbyNIM()
+                    }else if(rdIpk.isChecked()){
+                        ASCbyIPK()
                     }
                 }else if(rdDSC.isChecked()){
-                    if (inpSRC.text.toString() != "" && inpSRC.text.toString() != null) {
-                        searchDSC(inpSRC.text.toString())
-                    }
-                }else{
-                    if (inpSRC.text.toString() != "" && inpSRC.text.toString() != null) {
-                        search(inpSRC.text.toString())
+                    if (rdName.isChecked()){
+                        DSCbyName()
+                    }else if(rdNim.isChecked()){
+                        DSCbyNIM()
+                    }else if(rdIpk.isChecked()){
+                        DSCbyIPK()
                     }
                 }
             }
