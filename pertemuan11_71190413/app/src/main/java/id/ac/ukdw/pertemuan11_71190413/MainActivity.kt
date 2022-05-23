@@ -132,87 +132,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
         }
-        fun searchASC(src: String) {
-            Toast.makeText(this, "Sedang dicari", Toast.LENGTH_LONG).show()
-            firestore?.collection("dataMahasiswa")?.whereEqualTo("nim", src)
-                ?.orderBy("nim", Query.Direction.ASCENDING)?.get()!!
-                .addOnSuccessListener { documents ->
-                    var dataIsi = ""
-                    var counter = 1
-                    var statusSrcNimAda = false
-                    for (document in documents) {
-                        counter = counter + 1
-                    }
-                    if (counter > 1) {
-                        statusSrcNimAda = true
-                    }
-                    if (statusSrcNimAda) {
-                        var counter = 1
-                        for (document in documents) {
-                            dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
-                                    " - ${String.format("%.2f", document["ipk"])}\n"
-                            counter = counter + 1
-                        }
-                        txtHSLSRC.text = dataIsi
-                        Toast.makeText(this, "Data sudah keluar", Toast.LENGTH_SHORT).show()
-                    } else {
-                        firestore?.collection("dataMahasiswa")?.whereEqualTo("nama", src)
-                            ?.orderBy("nama", Query.Direction.ASCENDING)?.get()!!
-                            .addOnSuccessListener { documents ->
-                                var dataIsi = ""
-                                var counter = 1
-                                var statusSrcNameAda = false
-                                for (document in documents) {
-                                    counter = counter + 1
-                                }
-                                if (counter > 1) {
-                                    statusSrcNameAda = true
-                                }
-                                if (statusSrcNameAda) {
-                                    var counter = 1
-                                    for (document in documents) {
-                                        dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
-                                                " - ${String.format("%.2f", document["ipk"])}\n"
-                                        counter = counter + 1
-                                    }
-                                    txtHSLSRC.text = dataIsi
-                                    Toast.makeText(this, "Data sudah keluar", Toast.LENGTH_SHORT).show()
-                                } else {
-                                    firestore?.collection("dataMahasiswa")
-                                        ?.whereEqualTo("ipk", src.toFloat())
-                                        ?.orderBy("ipk", Query.Direction.ASCENDING)?.get()!!
-                                        .addOnSuccessListener { documents ->
-                                            var dataIsi = ""
-                                            var counter = 1
-                                            var statusSrcIPKAda = false
-                                            for (document in documents) {
-                                                counter = counter + 1
-                                            }
-                                            if (counter > 1) {
-                                                statusSrcIPKAda = true
-                                            }
-                                            if (statusSrcIPKAda) {
-                                                var counter = 1
-                                                for (document in documents) {
-                                                    dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
-                                                            " - ${
-                                                                String.format(
-                                                                    "%.2f",
-                                                                    document["ipk"]
-                                                                )
-                                                            }\n"
-                                                    counter = counter + 1
-                                                }
-                                                txtHSLSRC.text = dataIsi
-                                                Toast.makeText(this, "Data sudah keluar", Toast.LENGTH_SHORT).show()
-
-                                            }
-                                        }
-                                }
-                            }
-                    }
-                }
-        }
         // Ascending
         fun ASCbyName() {
             firestore?.collection("dataMahasiswa")?.orderBy("nama", Query.Direction.ASCENDING)?.get()!!
@@ -224,7 +143,7 @@ class MainActivity : AppCompatActivity() {
                                 " - ${String.format("%.2f", document["ipk"])}\n"
                         counter = counter + 1
                     }
-                    txtHSLSRC.text = dataIsi
+                    txtData.text = dataIsi
                     Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
                 }
         }
@@ -238,7 +157,7 @@ class MainActivity : AppCompatActivity() {
                                 " - ${String.format("%.2f", document["ipk"])}\n"
                         counter = counter + 1
                     }
-                    txtHSLSRC.text = dataIsi
+                    txtData.text = dataIsi
                     Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
                 }
         }
@@ -252,7 +171,7 @@ class MainActivity : AppCompatActivity() {
                                 " - ${String.format("%.2f", document["ipk"])}\n"
                         counter = counter + 1
                     }
-                    txtHSLSRC.text = dataIsi
+                    txtData.text = dataIsi
                     Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
                 }
         }
@@ -268,7 +187,7 @@ class MainActivity : AppCompatActivity() {
                                 " - ${String.format("%.2f", document["ipk"])}\n"
                         counter = counter + 1
                     }
-                    txtHSLSRC.text = dataIsi
+                    txtData.text = dataIsi
                     Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
                 }
         }
@@ -283,7 +202,7 @@ class MainActivity : AppCompatActivity() {
                                 " - ${String.format("%.2f", document["ipk"])}\n"
                         counter = counter + 1
                     }
-                    txtHSLSRC.text = dataIsi
+                    txtData.text = dataIsi
                     Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
                 }
         }
@@ -297,89 +216,8 @@ class MainActivity : AppCompatActivity() {
                                 " - ${String.format("%.2f", document["ipk"])}\n"
                         counter = counter + 1
                     }
-                    txtHSLSRC.text = dataIsi
+                    txtData.text = dataIsi
                     Toast.makeText(this, "Sorting", Toast.LENGTH_SHORT).show()
-                }
-        }
-
-        fun searchDSC(src: String) {
-            Toast.makeText(this, "Sedang dicari", Toast.LENGTH_LONG).show()
-            firestore?.collection("dataMahasiswa")?.whereEqualTo("nim", src)
-                ?.orderBy("nim", Query.Direction.DESCENDING)?.get()!!
-                .addOnSuccessListener { documents ->
-                    var dataIsi = ""
-                    var counter = 1
-                    var statusSrcNimAda = false
-                    for (document in documents) {
-                        counter = counter + 1
-                    }
-                    if (counter > 1) {
-                        statusSrcNimAda = true
-                    }
-                    if (statusSrcNimAda) {
-                        var counter = 1
-                        for (document in documents) {
-                            dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
-                                    " - ${String.format("%.2f", document["ipk"])}\n"
-                            counter = counter + 1
-                        }
-                        txtHSLSRC.text = dataIsi
-                        Toast.makeText(this, "Data sudah keluar", Toast.LENGTH_SHORT).show()
-                    } else {
-                        firestore?.collection("dataMahasiswa")?.whereEqualTo("nama", src)
-                            ?.orderBy("nama", Query.Direction.DESCENDING)?.get()!!
-                            .addOnSuccessListener { documents ->
-                                var dataIsi = ""
-                                var counter = 1
-                                var statusSrcNameAda = false
-                                for (document in documents) {
-                                    counter = counter + 1
-                                }
-                                if (counter > 1) {
-                                    statusSrcNameAda = true
-                                }
-                                if (statusSrcNameAda) {
-                                    var counter = 1
-                                    for (document in documents) {
-                                        dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
-                                                " - ${String.format("%.2f", document["ipk"])}\n"
-                                        counter = counter + 1
-                                    }
-                                    txtHSLSRC.text = dataIsi
-                                    Toast.makeText(this, "Data sudah keluar", Toast.LENGTH_SHORT).show()
-                                } else {
-                                    firestore?.collection("dataMahasiswa")
-                                        ?.whereEqualTo("ipk", src.toFloat())
-                                        ?.orderBy("ipk", Query.Direction.DESCENDING)?.get()!!
-                                        .addOnSuccessListener { documents ->
-                                            var dataIsi = ""
-                                            var counter = 1
-                                            var statusSrcIPKAda = false
-                                            for (document in documents) {
-                                                counter = counter + 1
-                                            }
-                                            if (counter > 1) {
-                                                statusSrcIPKAda = true
-                                            }
-                                            if (statusSrcIPKAda) {
-                                                var counter = 1
-                                                for (document in documents) {
-                                                    dataIsi += "${counter.toString()}. ${document["nim"]} - ${document["nama"]}" +
-                                                            " - ${
-                                                                String.format(
-                                                                    "%.2f",
-                                                                    document["ipk"]
-                                                                )
-                                                            }\n"
-                                                    counter = counter + 1
-                                                }
-                                                txtHSLSRC.text = dataIsi
-                                                Toast.makeText(this, "Data sudah keluar", Toast.LENGTH_SHORT).show()
-                                            }
-                                        }
-                                }
-                            }
-                    }
                 }
         }
             btnSMPN.setOnClickListener {
