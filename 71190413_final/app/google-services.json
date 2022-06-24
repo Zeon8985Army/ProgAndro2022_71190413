@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "12939935055",
+    "project_id": "pertemuan11-71190413-2",
+    "storage_bucket": "pertemuan11-71190413-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12939935055:android:4db876c82fbc333d16d93a",
+        "android_client_info": {
+          "package_name": "id.ac.ukdw.a71190413_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12939935055-i2c5j95d10vtctfclhpbeqn2jh0cfc1k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTS1-8leXRVOC27SadlAT3tYP1xd5dMA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12939935055-i2c5j95d10vtctfclhpbeqn2jh0cfc1k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

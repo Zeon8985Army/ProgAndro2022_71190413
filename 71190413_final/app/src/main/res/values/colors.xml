@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#0F9D58</color>
+
+    // Warna untuk project ini
+    <color name="abuAddGambar">#97000000</color>
+    <color name="btFragInsert">#FFBF00</color>
+    <color name="bcItemBuku">#BF001E4A</color>
+    <color name="judulBuku">#FF954F</color>
+    <color name="deleteGambarCvr">#FF0000</color>
+    <color name="toolbarBackgreound">#EE1E4E88</color>
+    <color name="toolbarBackgreound1">#1D4A83</color>
+    <color name="register">#0066FF</color>
+    <color name="text">#FFAA00</color>
+
+</resources>

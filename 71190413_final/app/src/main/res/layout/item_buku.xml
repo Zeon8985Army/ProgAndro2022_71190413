@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemBuku"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bcItemBuku"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="0dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            >
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:indeterminate="true"
+                android:layout_marginLeft="35dp"
+                />
+
+            <ImageView
+                android:id="@+id/imageItem"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"></ImageView>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/tv_judulBuku"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Terbitlah Dari Timur"
+                    android:textColor="@color/judulBuku"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/editItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.4"
+                    android:drawableEnd="@drawable/ic_baseline_edit_24"
+                    android:textSize="20sp"></TextView>
+
+                <TextView
+                    android:id="@+id/hapusItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.4"
+                    android:drawableEnd="@drawable/ic_baseline_delete_20"
+                    android:textSize="20sp"></TextView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_penerbit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Erlangga"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/tv_tahunTerbit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="1988"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_penulis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:text="By : Pertiparsi, Kormayu"
+                android:textColor="@color/white"
+                android:textSize="15sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
